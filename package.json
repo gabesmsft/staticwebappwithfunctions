@@ -1,7 +1,10 @@
 {
-  "name": "vanilla-basic",
+  "name": "staticwebappwithfunctions",
   "version": "1.0.0",
-  "scripts": { 
-    "start": "sirv ./src public --cors --single --no-clear --port 8000"
+  "private": true,
+  "scripts": {
+    "start": "npx --yes @azure/static-web-apps-cli start src --api-location api",
+    "test": "node --test tests/app.test.cjs",
+    "test:smoke": "node scripts/smoke-test.mjs"
   }
 }
